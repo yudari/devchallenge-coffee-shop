@@ -1,0 +1,49 @@
+.app-container {
+    min-height: 100vh;
+    background: linear-gradient(112deg, #1a1a1a 0%, #2d2d2d 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    outline: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.content-wrapper {
+    position:relative;
+    z-index:2;
+    padding: 3rem 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 2rem 1rem;
+
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem
+    }
+}
+
+@media (min-width:  769px) and (max-width: 1024px) {
+     .grid-container {
+        grid-template-columns: repeat(2fr, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+@media (min-width: 1025px) {
+     .grid-container {
+        grid-template-columns: repeat(3fr, 1fr);
+        gap: 2rem;
+    }
+}
+
